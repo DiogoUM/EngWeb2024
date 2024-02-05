@@ -7,4 +7,4 @@ Aqui são armazenados todos os trabalhos da Unidade Curricular de Engenharia Web
 
 - **Nome:** Diogo Cardoso Ferreira
 - **ID:** a94877
-- **Foto:**
+- **Foto:** !Fotografia[]
