@@ -12,7 +12,6 @@ for ficheiro in ficheiros:
     arquivo = et.parse(filename)
     dic[idRua] = arquivo
     idRua += 1
-#breakpoint()
 
 preHTML = '''
 <!DOCTYPE html>
@@ -24,9 +23,9 @@ preHTML = '''
 
 <div class="w3-container">
   <div class="w3-container w3-teal"> <h2>Ruas de Braga</h2> </div>
-  <p>Coloque o rato sobre "RUAS" e pesquise uma rua especifica.</p>
+  <p>Coloque o rato sobre "RUAS" e pesquise/selecione uma rua para obter informação mais detalhada sobre a mesma.</p>
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-black">RUAS</button>
+    <button class="w3-button w3-teal">RUAS</button>
     <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
       <input class="w3-input w3-padding" type="text" placeholder="Pesquisa..." id="myInput" onkeyup="myFunction()">
 '''
@@ -37,7 +36,7 @@ for ruaID, ruaObj in dic.items():
     #breakpoint()
     meta = raiz.find('meta')
     nome = meta.find('nome').text
-    ruahtml = f'      <a class="w3-bar-item w3-button" href="./html/{nome}.html">{ruaID}. {nome}</a>'
+    ruahtml = f'      <a class="w3-bar-item w3-button" href="./TPC1/html/{nome}.html">{ruaID}. {nome}</a>'
     html += ruahtml
 
 posHTML = '''
@@ -70,6 +69,6 @@ function myFunction() {
 
 pagHTML = preHTML + html + posHTML
 
-f = open('./TPC1/index.html','w')
+f = open('./TPC1/html/index.html','w')
 f.write(pagHTML)
 f.close()
