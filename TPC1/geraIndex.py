@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as et
 import os
 import pdb 
-idRua = 1
+
 path = "./TPC1/MapaRuas-materialBase/texto/"
 ficheiros = os.listdir(path)
 
@@ -10,9 +10,12 @@ dic = {}
 for ficheiro in ficheiros:
     filename = path + ficheiro
     arquivo = et.parse(filename)
-    dic[idRua] = arquivo
-    idRua += 1
+    rua = arquivo.getroot()
+    meta = rua.find('meta')
+    nr = meta.find('número').text
+    dic[nr] = arquivo
 
+#gera a página inicial
 preHTML = '''
 <!DOCTYPE html>
 <html>
@@ -25,19 +28,30 @@ preHTML = '''
   <div class="w3-container w3-teal"> <h2>Ruas de Braga</h2> </div>
   <p>Coloque o rato sobre "RUAS" e pesquise/selecione uma rua para obter informação mais detalhada sobre a mesma.</p>
   <div class="w3-dropdown-hover">
-    <button class="w3-button w3-teal">RUAS</button>
+    <button class="w3-button w3-teal w3-round-large">RUAS</button>
     <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
       <input class="w3-input w3-padding" type="text" placeholder="Pesquisa..." id="myInput" onkeyup="myFunction()">
 '''
 
 html = ""
 for ruaID, ruaObj in dic.items():
-    raiz = ruaObj.getroot()
-    #breakpoint()
-    meta = raiz.find('meta')
+    rua = ruaObj.getroot()
+    meta = rua.find('meta')
     nome = meta.find('nome').text
     ruahtml = f'      <a class="w3-bar-item w3-button" href="./TPC1/html/{nome}.html">{ruaID}. {nome}</a>'
     html += ruahtml
+
+    #cria as páginas de cada rua
+    f = open('./TPC1/html/'+ nome +'.html','w')
+
+    corpo = rua.find('corpo')
+
+    htmlRuaPag = f'''
+    
+    '''
+    f.write(htmlRuaPag)
+    f.close()
+
 
 posHTML = '''
     </div>
@@ -72,3 +86,4 @@ pagHTML = preHTML + html + posHTML
 f = open('./TPC1/html/index.html','w')
 f.write(pagHTML)
 f.close()
+
