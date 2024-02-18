@@ -112,9 +112,11 @@ for ruaID, ruaObj in dic.items():
         desc = imagem.find('legenda').text
         newPath = cam[2:]
         #TODO alterar path: absoluto -> relativo
+        # path pc fixo -> D:/EW/EngWeb2024/T
+        # path portatil -> /home/diogo/Desktop/uni/4ºano/EW/EngWeb2024/TPC1/MapaRuas-materialBase/imagem/MRB-01-RuaDoCampo-nascente.PNG
         html4 += f'''
         <figure class="mySlides">
-          <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
+          <img src="TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
           <figcaption><b>{desc}</b></figcaption>
         </figure>
         '''
