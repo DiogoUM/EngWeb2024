@@ -30,13 +30,15 @@ preHTML = '''
 <title>Ruas de Braga</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
 
+<body>
 <div class="w3-container">
   <div class="w3-container w3-teal"> <h2>Ruas de Braga</h2> </div>
-  <p>Coloque o rato sobre "RUAS" e pesquise/selecione uma rua para obter informação mais detalhada sobre a mesma.</p>
-  <div class="w3-dropdown-hover">
-    <button class="w3-button w3-teal w3-round-large">RUAS</button>
+  <br>
+  <p><b>Coloque o rato sobre "RUAS" e pesquise/selecione uma rua para obter informação mais detalhada sobre a mesma.</b></p>
+  <br>
+  <div class="w3-dropdown-hover w3-block">
+    <button class="w3-button w3-block w3-teal w3-round-large" width="1024">RUAS</button>
     <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
       <input class="w3-input w3-padding" type="text" placeholder="Pesquisa..." id="myInput" onkeyup="myFunction()">
 '''
@@ -117,7 +119,6 @@ for ruaID, ruaObj in dic.items():
           <figcaption>{desc}</figcaption>
         </figure>
         '''
-        #html4 += f'<img class="mySlides" src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>'
         html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
         count += 1
 
