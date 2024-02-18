@@ -1,3 +1,63 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Praça do Pão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Praça do Pão</h2>
+      <p>Pequena praça em frente à fachada da  Sé, que ao longo dos séculos foi tendo uma vida e importância diferentes, mas sempre descendente.Aberta talvez no  séc. XV, resultou da destruição da rua dos Açougues, pequena artéria que então ligava as actuais rua D. Gonçalo Pereira e D. Gualdim Pais. Nessa data instalou-se nela a Praça do Pão. No tempo de D. Diogo de Sousa construiu-se, no ângulo que esta praça faz com a rua de Maximinos, o novo edifício da Câmara Municipal, que seria destruído nos inícios do séc. XIX (No Mappa está na rua de D. Gualdim).A partir de meados do  séc. XVIII, com a mudança da vida comercial para a rua do Souto e zona exterior da porta que tem o mesmo nome, com a erecção da ala barroca do Palácio dos Arcebispos e, defrontando-a, com o novo edifício da Câmara (1755), a praça do Pão irá perdendo toda a sua importância comercial e política.Em  1868 foi projectado o alargamento da rua de Maximinos, que rapidamente foi levado a cabo, recebendo a nova rua a largura total da praça do Pão. A partir daí deixou de fazer sentido a existência de duas artérias diferentes, sendo este largo integrado na nova rua que, desde 26/11/1925, se passou a chamar rua D. Paio Mendes.Hoje ainda se conservam algumas das casas existentes no Mappa. Mas as mais interessantes, as dos prazos 4-6 e 13-14 já desapareceram.Das 5 casas do lado Norte e 9 do lado Sul eram prazos do  Cabido 4 e 9, respectivamente.Confronta, de nascente, com a  Rua do Poço.As casas nº 5 e 6, passaram a constituir um único prazo, em  1702. Em 1789, o nº 4 foi também integrado no mesmo prazo.As casas nº 5 e 6, passaram a constituir um único prazo, em  1702. Em 1789, o nº 4 foi também integrado no mesmo prazo.O enfiteuta sucedeu a seu pai,  Francisco de Araújo, o qual era filho de José de Araújo, barbeiro, e de sua mulher Ana Maria.O enfiteuta sucedeu a seu pai,  Francisco de Araújo, o qual era filho de José de Araújo, barbeiro, e de sua mulher Ana Maria.Esta casa possui frontaria para a  Rua de D. Gualdim. Igual pensão é paga ao Hospital de S. Marcos.A parte do poente é foreira ao  Hospital de S. Marcos.Encontram-se unidas num único prazo desde o ano de  1660.No ano de  1660 foi incorporado neste prazo uma torre pertencente ao nº 16, e, no ano de 1724, um quintal do nº 2 da Rua dos Açougues Velhos.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-04-PracaDoPao-norte.PNG style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-04-PracaDoPao-sul.PNG style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

@@ -1,3 +1,82 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua do Paymanta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua do Paymanta</h2>
+      <p>Rua de zona rural, que antes deveria ser chamada de cangosta, mesmo para os padrões do  séc. XVIII.Ligando a  rua da Ponte de Guimarães com o pontilhão das Lagesestava, em 1750, marginada por prédios de um e dois pisos do lado Sul e de apenas um piso no Norte. 
+            Todas estas casas são extraordinariamente simples, estão implantadas em terreno não nivelado, com uma técnica construtiva rudimentar, como nos mostram as pequeníssimas aberturas das habitações de dois pisos.No termo da rua está a magnífica casa seiscentista das Lages, "deque he Emphiteuta  Pedro da C.ª Sottomaior" que foi Alcaide Mor de Braga. É este sem dúvida o edifício civil que aparece 
+            no Mappa e, o que mereceu mais cuidado no desenho.Era uma casa com pedra de armas sobre um portão que dava acesso a um páteo interior, vedado por uma cerca ameada. Tinha três corpos que terminavam na margem do rio Este.
+            Sobre o curso de água, tinha um anexo coberto, talvez um moinho. Infelizmente está hoje destruído todo este conjunto.Das 17 casas do lado Norte e 16 do Sul eram todas prazos do  Cabido.Não tem hoje uma correspondência correcta pois andava entre as actuais ruas de Pai Amante (que está em vias de completo desaparecimento) e Conselheiro Lobato.Pertence ao nº 46 da  Rua da Ponte de 
+                    Guimarães, para onde tem a frontaria principal.Os  herdeiros de Margarida Fernandes pagam 
+                    100 reis ao n° 17.Pagam foro ao nº 17. A casa n° 3 confronta, 
+                    do nascente, com terra do prazo da  quinta e 
+                        moinhos da Serra.Paga foro ao nº 17.Paga foro ao nº 17.Paga foro ao nº 17.Paga foro ao nº 17.Paga foro ao nº 17.Paga 180 reis ao nº 17.Paga 180 reis ao nº 17.Paga 350 reis ao nº 17.Paga 80 reis ao nº 17.Paga 80 reis ao nº 17.Paga 80 reis ao nº 17.Paga 80 reis ao nº 17.Esta casa é cabeça do prazo da  quintã e
+                        moinhos da Serra e da Ribeira. O enfiteuta 
+                    possuia esta quintã que fora emprazada a seu 
+                    '    familiar, o Padre Fernão Anes, no ano de 1532.O prazo é constituído pelos números: 2 a 16 e
+                    
+                    18 a 32; 9 a 23 e 28 a 46 da  Ponte de 
+                        Guimarães; 22 a 34 e 51 a 74 da Rua da Ponte 
+                            de Guimarães.Paga 80 reis ao nº 17.Paga 80 reis ao nº 17.Paga 150 reis ao nº 17.Os  herdeiros de Domingos Fernandes, casado 
+                    com Isabel Gonçalves, pagam 200 reis ao
+                    n° 17.Paga 190 reis ao nº 17.Paga 190 reis ao nº 17.Os  herdeiros de Belchior Fernandes, casado 
+                    com Ana Dias, pagam 400 reis e 2 galinhas ao 
+                    nº 17.Paga 100 reis ao nº 17.Paga 200 reis ao nº 17.Paga 50 reis ao nº 17.Paga 30 reis ao nº 17.Corresponde ao nº 51 da  Rua da Ponte de 
+                    Guimarães, para onde tem a frontaria principal.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-40-RuaDoPaymanta-Sul.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-40-RuaDoPaymanta-Norte.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

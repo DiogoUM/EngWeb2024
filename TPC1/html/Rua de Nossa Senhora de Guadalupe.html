@@ -1,3 +1,89 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua de Nossa Senhora de Guadalupe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua de Nossa Senhora de Guadalupe</h2>
+      <p>Rua íngreme, pertencente ao complexo urbanístico do  campo Novo, ligava 
+            a Capela de Guadalupe à praça do Gavião.Aberta também em  1725, tinha já, nesta data, quase todas as suas casas 
+            construídas, no lado Norte. Eram simples, na sua grande maioria de um só piso, 
+            e que, contrariamente à rua de S. Gonçalo, se estendiam pela encosta acima, até 
+            à rua em Frente de Nossa Senhora de Guadalupe.Na parte Sul estavam apenas construídas 2 habitações, sensivelmente no meio 
+            da rua, na parte plana. Eram edifícios de 2 pisos, em pedra, mas de desenho 
+            tradicional. Infelizmente o desenho está um pouco destruído, cortando todo o piso 
+            térreo da casa do prazo n.º 9 e um pouco da do anterior.Todas as 17 casas aqui apresentadas são prazos do  Cabido.Ainda hoje é denominada  rua de Guadalupe.«Chãos de casas» do prazo do  casal dos Chãos ou Quinteiro. 
+                        O chão n.º 1 confronta, do poente, com o chão n.° 26 da Praça do Gavião.Pertencem ao  casal dos Chãos ou Quinteiro. 
+                        Nos livros dos prazos do cabido não se 
+                        encontram escrituras de subemprazamento.Ursula Vieira, e suas irmãs, Vitoriana Josefa e Joana Antónia, pagam 1200 reis ao enfiteuta do 
+                        prazo do casal dos Chãos ou Quinteiro, à face 
+                        do qual foi subemprazada em 1745.António Gomes, pedreiro, casado com Ana Gomes, 
+                        paga 1200 reis ao enfiteuta do prazo do casal dos Chãos ou Quinteiro, à face do qual 
+                        foi subemprazado em 1725.Luís Cardoso Coutinho de Oliveira, casado com Antónia José Leonor de Vasconcelos, paga 
+                        7800 reis ao enfiteuta do prazo do casal dos Chãos ou Quinteiro, 
+                        conforme o subemprazamento de 1740.Ao prazo pertencem, ainda, os n.° 1 a 6 da 
+                         rua em frente de N. Sra. de Guadalupe.Os n.° 9 e 10, encontram-se unidos desde o 
+                        ano de  1725.À face da escritura do ano de  1740 foram feitos 
+                        títulos subalternos das casas n.° 14, 15, 16 e 17.«Chãos de casas» do prazo do  casal dos Chãos ou Quinteiro. 
+                        O chão n.° 18 confronta, do 
+                        nascente, com a rua em frente de N. Sra. de Guadalupe.Pertencem ao  casal dos Chãos ou Quinteiro, a 
+                        cujo enfiteuta se paga foro. Nos livros dos 
+                        prazos do cabido não se encontram escrituras de 
+                        subemprazamento.«Chãos de casa» do prazo do  casal dos Chãos ou Quinteiro. 
+                        O n.° 35 confronta, do poente, 
+                        com o n.° 27 da Praça do Gavião.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-50-RuaDeNossaSenhoraDeGuadalupe-a.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-50-RuaDeNossaSenhoraDeGuadalupe-b.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

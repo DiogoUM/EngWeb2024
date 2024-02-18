@@ -1,3 +1,63 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua dos Açougues velhos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua dos Açougues velhos</h2>
+      <p>Pequenina rua que liga a fachada da  Sé com a rua Nova.Aberta possivelmente na Idade Media nela existiram ate ao  sec. XV os açougues da cidade. Nessa data a rua era mais longa, prolongando-se até quase ao início da rua do Poço.Actualmente poucas alterações de peso há nesta rua quanto ao Mappa e nenhuma respeitante ao seu tamanho e largura. O edifício pertencente à  Sé foi porém substancialmente aumentado em altura, apresentando-se hoje radicalmente diferente.Pena foi que as casas dos prazos n.° 3 e 4 desta rua, ja em  1750 com um só inquilino, tivessem sido destruídos, pois apresentavam uma curiosíssima janela de canto e um jogo de telhados estranho.Das duas casas do lado Norte e 6 do Sul pertenciam ao  Cabido 1 e 6 respectivamente.Não sabemos quando o seu nome mudou para a  rua do Cabido. No mapa de 1857 tem ainda o nome de Travessa dos Açougues Velhos.Corresponde à casa nº16 da  Praça do Pão para onde tem a frontaria e serventia principais.Estas casas foram construídas depois de  1550, em pertenças do nº16, da Praça do Pão e, desde o ano de 1725, constituem um só prazo.A última porta do nº6, para o lado do norte, é serventia do nº7 da  rua Nova. Encontram-se unidas desde o ano de 1641.A última porta do nº6, para o lado do norte, é serventia do nº7 da  rua Nova. Encontram-se unidas desde o ano de 1641.Desde do ano  1644 que correspondem ao nº5 da Rua Nova de Sousa, para onde têm a frontaria e serventia principais.Foi demolida para alargamento das casas do  Cabido, depois do ano de 1793.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-03-RuaDosAcouguesVelhos-nascente.PNG style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-03-RuaDosAcouguesVelhos-poente.PNG style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

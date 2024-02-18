@@ -1,3 +1,63 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua dos Biscaínhos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua dos Biscaínhos</h2>
+      <p>Aberta no  séc. XVI no tempo de D.Diogo de Sousa, unia o campo da Vinha com o campo das Hortas.Em finais do  séc.XVI, tinha já muitos edifícios conforme nos mostra o mapa de Braunio.No Mappa, contudo, estão apenas desenhados três edifícios do lado Norte: dois de três pisos e o palácio dos Biscaínhos .Se as casas são simples e de arquitetura tradicional, o palácio é o magnífico edifício que, felizmente, ainda hoje se mantém intacto.Curiosamente, no Mappa, não há indicações de que qualquer um destes edifícios foram foreiros ao  Cabido. No volume 4 dos Índices dos Prazos do Cabido (p.441 e 442) há, porém, notícia de duas destas casas serem emprazadas.Mantém a designação de  rua dos Biscaínhos.Os herdeiros do Lic.  Domingos Correia de Abreu pagam 150 reis e 2 alqueires e meio de trigo ao enfiteuta do prazo da Quinta da CónegaPertence ao nº1 da  Rua da Cónega, para onde tem, também, frontaria.A fachada situa-se no  Campo da Vinha.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-59-RuaDosBiscainhos-norte.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

@@ -1,3 +1,74 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua do Alcaide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua do Alcaide</h2>
+      <p>Construída em volta da parte sul da muralha medieval, ligava o  campo de S.Tiago
+            com o Terreiro de S.Sebastião.Começada a construir talvez no tempo de  D.Diogo de Sousa, tinha,
+            em 1750, boas casas de granito, com uma grande fachada, de 2 pisos, molduras de pedras 
+            nas portas e janelas do 1º piso e filetes de pedra sobre as janelas bracarenses do andar principal.
+            Curiosamente não se vêem casas com brasões, embora tivessem, com toda a certeza, vivido aqui membros
+            de famílias nobres. A sua própria designação, do Alcaide, aponta para isso.Até hoje pouco se alterou, tendo só desaparecido as casas dos prazos 19 a 21. O seu nome também se 
+            manteve.O lado Norte não está desenhado porque as habitações que encostavam à muralha deveriam ser prazos da
+             Câmara.As 18 casas que apresentam são todas prazos do Cabido.Pertencem ao nº38 da  Rua do Arrabalde da Cruz da Pedra, para onde tem 
+                        frontaria e serventia principais.Pagam foro ao nº20 da  Rua do Arrabalde da Cruz da Pedra. Os nº 4 a 8
+                        foram integrados na escritura do prazo nº3.Pertence ao nº36 da  Rua do Arrabalde da Cruz da Pedra, a qual está integrada 
+                        no prazo da casa nº20, da mesma rua.Paga foro ao nº20 da  Rua do Arrabalde da Cruz da Pedra.Portal de serventia da casa nº33 do  Arrabalde da Cruz da Pedra.Casas que pagam foro ao nº20 da  Rua do Arrabalde da Cruz da PedraCasa e portal de serventia do nº28 da  Rua do Arrabalde da Cruz da Pedra.Corresponde a três casas que pagam foro ao nº 20 da  Rua da Cruz da Pedra.Portal de serventia do campo da casa nº 20 da  Rua do Arrabalde da Cruz da Pedra
+                        Confronta, do nascente, com a casa pertencente à propriedade, denominada, "O Bispo".</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-31-DoAlcaide-Sul.png style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

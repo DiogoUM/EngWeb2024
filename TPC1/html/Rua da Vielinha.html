@@ -1,3 +1,79 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua da Vielinha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua da Vielinha</h2>
+      <p>Pequena e estreitíssima artéria que ligava a  Rua de Maximinos com o rexio da Praça.Acompanhando a muralha que a faceia parcialmente, tem o prazo do Cabido mais antigo,
+            com data de  1515.Com uma configuração esquisita, tinha em  1750 as casas do lado Poente,
+            que escontavam à muralha, de bastante boa qualidade, havendo em 4 delas varandas (de
+            madeira?) e gelosias. Com excepção de uma, todas eram sobradadas.Quase insólita é a existência de uma capela, sobre as casas, talvez até sobre a
+            muralha, e sensivelmente a meio da rua, de que não conhecemos nenhuma referência
+            escrita.Do lado Nascente, as casas são de diferentes pisos, com bastante mau desenho de
+            fachada; as janelas eram tapadas por portadas de madeira. Há uma, porém, com um desenho
+            estranhíssimo e com uma linha de empena extremamente irregular.A meio deste lado havia um pequeno beco que levava a uma casa.Penso ser a designação de Vielinha bastante mais correcta que a actual de Violinha,
+            que, aliás, deve ter origem no topónimo antigo.Das 8 casas do lado Nascente e 7 do Poente, eram prazos do Cabido 6 do
+            Nascente.Foi pertença do n.º 15 da  Rua dos Sapateiros.Esta casa pertence à obra da Sé, a quem os herdeiros de  Domingos de Araújo, caminheiro, e sua mulher, Catarina Gonçalves, lhe pagam de foro
+                        80 reis. Esteve integrada no prazo de uma casa da Rua dos Sapateiros.Pertenceu ao n.º 15 da  Rua dos Sapateiros.Encontra-se subemprazada aos herdeiros de  Manuel
+                            Coelho de Araújo, tratante, e sua mulher, Maria da Costa. Faz parte do prazo da casa n.º
+                        12, da Rua dos Sapateiros, à qual paga de foro 2000
+                        reis.Corresponde a duas casas pequenas, situadas na «agiela» da
+                         Rua da Vielinha, da parte norte.Corresponde ao n.º 13 da  Rua dos Sapateiros.Confronta, do norte, com a agiela da  Rua da Vielinha e, do
+                        sul, com parte da casa n.º 18 da Rua de Maximinos.Corresponde ao n.º 18 da  Rua de Maximinos, para onde tem a
+                        frontaria e serventia principais.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-24-RuaDaVielinha-nascente.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-24-RuaDaVielinha-poente.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

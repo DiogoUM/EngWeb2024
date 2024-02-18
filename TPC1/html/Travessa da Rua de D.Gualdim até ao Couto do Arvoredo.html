@@ -1,3 +1,75 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Travessa da Rua de D.Gualdim até ao Couto do Arvoredo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Travessa da Rua de D.Gualdim até ao Couto do Arvoredo</h2>
+      <p>Mais um fragmento da  rua das Travessas, o último no sentido Este-Oeste. Só no 
+            último quartel do século passado a rua das Travessas se prolongaria além da rua Verde
+            e Couto do Arvoredo, cortando a muralha, para desembocar no campo das Carvalheiras,
+            então chamado de S.Miguel o Anjo.A transformação recebida há cem anos nesta artéria, qua a fez passar a ter o 
+            dobro da largura, destruiu todas as casas apresentadas no Mappa. E pena foi, 
+            porque embora este troço de rua seja de interesse secundário na cidade de então,
+            apresentava uma casa brasonada, em pedra, de 3 pisos, no gaveto com a  rua de 
+            D. Gualdim e uma curiossísima casa com escada exterior, talvez quinhentista, nada vulgar 
+            neste documento.Das 6 casas do lado Norte e 7 do Sul, são prazos do  Cabido 2 de cada lado.Esta travessa, está atualmente integrada na  rua D. Afonso Henriques.Corresponde ao n.º 1 da  Rua de Santo António, para onde 
+                tem a frontaria e serventia principais.Corresponde ao n.º 22 da  Rua de Santo António, para onde 
+                    tem a frontaria e serventia principais.Fica situada nesta travessa «na parte que, à mão 
+                direita, liga a  Rua das Chagas à Rua Verde».Corresponde ao n.º 15 da  Rua de D. Gualdim, para onde 
+                    tem a frontaria e serventia principais.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-17-TravessaDaRuaDeDGualdimAteAoCoutoDoArvoredo-norte.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-17-TravessaDaRuaDeDGualdimAteAoCoutoDoArvoredo-sul.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

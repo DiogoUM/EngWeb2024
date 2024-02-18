@@ -1,3 +1,77 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Terreiro de Sto. António e Postigo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Terreiro de Sto. António e Postigo</h2>
+      <p>Pequena artéria que ligava o  terreiro de S. Tiago ao Postigo de S.Sebastião.Mantendo o traçado de uma rua da cidade romana, já no séc. XIV nos aparece com os nomes 
+            de  rua Travessa e rua do Postigo.Com a expulsão dos judeus a sua designação passará a ser de Santo António, a mesma 
+            da rua que lhe era contígua.Poucos anos mais tarde  D. Diogo de Sousa criou os Estudos Gerais, que os seus sucessores D. Henrique e D. Frei Bartolomeu dos Mártires muito protegeram; 
+            a sua capela, com a invocação 
+            de S. Paulo, faceava com o lado Sul do Terreiro, que aqui aparece como rua do Terreiro de Santo 
+            António.Ao lado da capela, não se sabe se relacionada com os Estudos Gerais, havia uma estupenda 
+            casa seiscentista, com um belíssimo e muito raro trabalho de pedra nas janelas, e portão, lateral,
+            brasonado.O impacto económico da saída dos muitos estudantes aqui hospedados, após a expulsão dos jesuítas em  1759,
+            e, consequente encerramento dos Estudos Gerais, ainda não foi estudado.No último quartel do séc. XIX foi esta rua alargada desaparecendo a sua face Sul, bem com o  «postigo»
+            da muralha.A face Norte manteve-se excepto a casa mais recuada, que, nos inícios do séc. XIX, foi totalmente 
+            alterada.Actual  rua de S. Paulo.Encontram-se unidas, num só prazo, desde  1569. A casa n.º 1 confronta, do nascente, com 
+                       uma parte da casa que é foreira à comenda de S. Pedro de Merelim.O enfiteuta é da freguesia de  Penso, concelho de Melgaço.Confronta, do poente, com casa foreira ao  mosteiro de Bouro.Foram construídas, depois do ano de 1683, no quintal da casa n.º 4 e pagavam foro a 
+                        este prazo.A enfiteuta é filha de  António de Araújo, escrivão das apelações, e de sua 2.ª mulher, Ursula de Araújo. A casa foi construída, depois do ano de 1557, em pertenças do n.º 12, 
+                        da Rua de D. Gualdim.Corresponde ao n.º 11 da  Rua de D. Gualdim, para onde tem frontaria 
+                        e serventia principais.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-20-TerreiroDeStoAntonioEPostigo-norte.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-20-TerreiroDeStoAntonioEPostigo-sul.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

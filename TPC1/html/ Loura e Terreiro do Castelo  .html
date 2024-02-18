@@ -1,3 +1,63 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title> Loura e Terreiro do Castelo  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2> Loura e Terreiro do Castelo  </h2>
+      <p>Pequena artéria que, partindo da  igreja dos Terceiros, contornava a cidadela medieval, até à rua do Souto.Segundo  Alberto Feio, a construção da cidadela deu origem a um pequeno largo que tomou o nome de Terreiro do Castelo. No séc. XVII deverá ter sido aberta a Loura, uma vez que na planta de Braunio ainda não figura.Da sua história,que deverá ter sido rica, pouco sabemos; e não vamos falar aqui da vida do  Castelo.Entre  1690 e 1733 foi construída a igreja do Terceiros, da Venerável Ordem Terceira de S. Francisco que, embora já esteja fora desta rua, nela intervirá com a construção da casa do Definitório, em 1758.De  1750 até aos nossos dias perdeu-se na Loura o magnífico portão de pedra e no seu lugar foi edificada uma boa casa, que tem data de 1824; e no local do prazo nº 3 foram edificadas casas "estilo Português Suave". Os prédios do Terreiro do Castelo foram todos alterados no séc. XX.Do lado oposto, após a destruição da  cidadela em 1905 começou a ser construído o edifício que ainda agora se vê, projectado pelo arquitecto Marques da Silva.A rua, contudo, mantém ainda o recanto entre as casas dos prazos 2 e 3, embora de forma menos acentuada.Das 10 casas, desta rua, 3 eram prazos do Cabido.Estas duas artérias têm hoje o nome comum de  rua do Castelo.A casa nº 1 confronta, do sul, com casa foreira à  confraria de S. João do Souto.A casa nº 1 confronta, do sul, com casa foreira à  confraria de S. João do Souto.Antes de  1480 funcionou aqui o " Forno da Vila"</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-07-LouraETerreiroDoCastelo.JPG style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

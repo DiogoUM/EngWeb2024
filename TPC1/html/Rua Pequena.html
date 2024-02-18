@@ -1,3 +1,64 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Rua Pequena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Rua Pequena</h2>
+      <p>Como o nome diz é uma pequenina rua que ligava a  rua das Oucias com a travessa da rua do Forno para a do Poço.Respeitando o reticulado romano era mais uma das artérias do  bairro medieval adjacente à catedral.Na Idade Média era já pequena e permitia um melhor acesso ao  mercado da olaria, então existente junto ao transepto da Sé. Por isso recebeu esse nome.No séc. XVI, o célebre humanista  Diogo Teive emprazou ao Cabido a casa n.º 2, passando a ser conhecida por rua do Teive. Até que por volta de 1620 Mateus Fernando Farto, talvez senhor de forte importância política ou económica, veio para aqui viver, tanto bastando para ser conhecida pelo seu apelido.No Mappa, contudo, aparece como  rua Pequena. Sabemos ainda que talvez a partir do fim da Idade Média, e durante cerca de um século, também foi chamada de rua Painsalvos, por nela ter morado o abade da freguesia transmontana do mesmo nome.Embora pequena, tem 3 edifícios notáveis: o prazo n.º 1, grande construção em pedra, com fachada bem organizada e um recuado em toda a extensão; o prazo n.º 2, casa com quase excesso de aberturas, (sem comparação com qualquer outra em todo o Mappa); e o prazo n.º 5, construção também em pedra, de 2 pisos, com mais um piso, no seu último vão Sul, quase semelhando uma torre.Das 4 casas existentes quer no lado Nascente, quer no Poente, 3 e 4, respectivamente, são prazos do  Cabido.Corresponde ao n° 8 da  Rua das Oussias, para onde tem a frontaria e serventia principais.Prazo constituído por casa, quintal e palheiro. este incorporado em  1618 e pertencente ao
+                        n.º	1.Confronta, do norte, com casa dízima a Deus e com o n° 2 e, do sul, com casa foreira ao morgado de Real.Corresponde ao n° 7 da  travessa que vai da Rua do Poço ou de Santa Maria para a do Forno, para onde tem frontaria e serventia principais.Este prazo encontra-se unido desde  1583.Este prazo encontra-se unido desde  1583.A enfiteuta foi herdeira do Reitor de Freitas, José Ferreira Petiz. A casa foi construída, depois de 1587, em pertenças do n.º 9 da Rua do Poço ou de Santa Maria.Corresponde ao n.º 9 da  Rua das Oussias, para onde tem a frontaria e serventia principais. Situa-se na esquina da Rua Pequena e terreiro das Oussias.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-13-RuaPequena-Nascente.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-13-RuaPequena-Poente.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>{nome}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
@@ -9,14 +9,13 @@
 <body>
 
 <div class="w3-container">
-  <h2>Slideshow Indicators</h2>
-  <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+  <h2>{nome}</h2>
+  <p>{paragrafos}</p>
 </div>
 
 <div class="w3-content" style="max-width:800px">
-  <img class="mySlides" src="img_nature_wide.jpg" style="width:100%">
-  <img class="mySlides" src="img_snow_wide.jpg" style="width:100%">
-  <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
+  <img class="mySlides" src="./TPC1/MapaRuas-materialBase/{path}" style="width:100%">
+  <img class="mySlides" src="{}" style="width:100%">
 </div>
 
 <div class="w3-center">
@@ -26,7 +25,6 @@
   </div>
   <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
   <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
-  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
 </div>
 
 <script>

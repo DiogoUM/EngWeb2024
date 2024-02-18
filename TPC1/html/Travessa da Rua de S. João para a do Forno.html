@@ -1,3 +1,107 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Travessa da Rua de S. João para a do Forno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Travessa da Rua de S. João para a do Forno</h2>
+      <p>Rua em forma de cotovelo, tendo uma espécie de
+            protuberância no ângulo, mais parecendo duas vias
+            que se encontrava num ponto que se alargava, formando
+            aí um «Rexio».Seria um pouco estranho de compreender o seu traçado,
+            se não soubessemos que no ponto onde se encontrava os
+            seus troços Sul e Oeste terá passado, possivelmente,
+            a muralha da cidade romana. Só assim se pode aceitar
+            que esta artéria não tivesse sequência até à  Igreja
+            de S. João de Souto, ou à Porta de S. João.Sem unidade no tipo de casas que a formavam, tinha
+            prédios de dois pisos, alternando com outros de três
+            ou até um; edifícios com longa fachada, a par com outros
+            de pequena e média dimensão.Todas as casas são de arquitectura tradicional, talvez
+            na sua maioria em pedra, com seis raras varandas e apenas
+            três gelosias, e uma forte percentagem (60%) de janelas
+            típicas de  Braga. De notar a casa grande situada no canto
+            Sudoeste do «Rexio de S. João» que tem um grande terreno
+            de cultivo virado à rua, estando o prédio implantado
+            atrás, na linha de barreira que fecha a Sul o «Rexio».Das 10 casas existentes do lado Norte e outras tantas
+            do lado Sul são prazos do  Cabido 5 e 6 respectivamente.Se bem que todo o bairro a Sul da  Sé, pelo entrecruzar
+            de ruas, seja conhecido como Bairro das Travessas é muito
+            estranho e nada aceitável o nome desta rua que ora tratamos.
+            Na Idade Média a parte Este desta artéria, que no Mappa tem
+            o nome de «Travessa para a rua de S. João», era conhecida como rua da Carrapata e a parte Sul, sem designação especial
+            no Mappa, tinha o nome de Paio Manta, talvez uma pessoa
+            dominante que aí vivesse. No séc. XVI, a rua de Paio Manta
+            tomou o nome de rua Coelho que manteve até 19/12/1892, data
+            em que passou a denominar-se de El-Rei. Em 24 de Fevereiro de
+                1944 recebeu o nome de D. Afonso Henriques.Desde  1892 que esta rua está muito alterada, embora se
+            mantenha a sua função: A rua de «Coelho» foi alargada,
+            o «Rexio de S. João» desapareceu e a «Travessa para o Rexio
+            de S. João» integrou o novo largo de S. João de Souto, então
+            formado juntamente com parte da rua de S. João e outros
+            terrenos. Grosso modo, podemos dizer que esta travessa se
+            integra hoje na rua D. Afonso Henriques e Largo de
+                S. João de Souto.Corresponde ao n.º 7 da  Rua de S. João,
+                    para onde tem a frontaria e serventia principais.No ano de  1607, por escambo realizado entre o Cabido
+                    e a Companhia de Jesus, esta casa foi trocada com o casal de Real,
+                    situado na freguesia de S. Jerónimo de Real.
+                    Confronta com quintal dos padres da Companhia de Jesus.Emprazamento feito em  1724. Confronta, do nascente, com casa for. ao chantrado.Foi construída em pertenças da casa n.º 3, depois do ano de  1534.A casa n.º 6 confronta, de nascente, com casa for. à cororaria.
+                    Pertence, também, ao enfiteuta destas duas casas o n.º 12 da  rua do Forno.A casa n.º 6 confronta, de nascente, com casa for. à cororaria.
+                    Pertence, também, ao enfiteuta destas duas casas o n.º 12 da  rua do Forno.Encontram-se unidos a este prazo os n.º 10 e 11 da  Rua do Forno,
+                    desde o ano de 1596Pertencem ao n.º 9 da  Rua do Forno, para onde têm a frontaria e serventia principais.
+                    A casa n.º 9 confronta, do nascente, com casa foreira cororaria e ficou unida ao n.º 8 no ano
+                    de 1674.Parte desta casa pertence à  Esmola e parte ao chantrado.
+                    Confronta, do poente, com casa foreira à cororaria e com o n.º 9.Foi construída em pertenças do n.º 11 no ano de  1694.Confronta, do nascente, com casa foreira ao  Hospital de S. Marcos.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-10-TravessaDaRuaDeSJoaoParaADoForno-Norte.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-10-TravessaDaRuaDeSJoaoParaADoForno-Sul.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

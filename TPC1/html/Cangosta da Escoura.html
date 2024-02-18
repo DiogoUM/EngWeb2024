@@ -1,3 +1,67 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Cangosta da Escoura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Cangosta da Escoura</h2>
+      <p>Pequena artéria, de carácter rural, estabelecia ligação entre a  igreja de S. Vicente e a igreja e convento do Carmo.Aberta em data que desconhecemos, não está totalmente representada no Mappa; nele só vemos a metade Este, embora de ambos os lados.Sem casas dignas de relevo, apresenta do lado Sul uma série de portas que davam acesso aos quintais das habitações da 
+             rua dos Chãos de Cima. Aliás todo este lado era pertença das casas daquela rua, pois que até os 4 edifícios (n.ºs 8, 24, 27 e 28) nele 
+            representados pertenciam, respectivamente, aos seus prazos n.ºs 46, 27, 23 e 22.Do lado Norte, há apenas 5 pequenas casinhas totalmente ligadas aos campos que as envolviam: assim a casa do prazo n.ºs 30 e 31 andam emprazadas 
+            juntamente com o campo n.º 29, e as casas 32, 33 e 35 estavam também todas subemprazadas com os quintais n.º 34 e 36 num só título.Todas estas casas são foreiras ao cabido.Desde  14 de Setembro de 1885 que passou a chamar-se rua Gabriel Pereira de Castro. Apesar das placas toponímicas existentes 
+            no local competente terem gravado este nome é apenas conhecida como rua da Escoura.Pertence à casa n.º 9 da  Rua das Palhotas, para onde tem frontaria e serventia principais.Porta de serventia do quintal da casa n.° 52 da  Rua dos Chãos de Cima.Quintal da casa n.º 51 da  Rua dos Chãos de Cima.Porta de serventia da casa n.º 50 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 49 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 48 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 47 da  Rua dos Chãos de Cima.Pertença do n.º 46 da  Rua dos Chãos de Cima.Quintal da casa n.º 45 da  Rua dos Chãos de Cima.Quintal da casa n.º 44 da  Rua dos Chãos de Cima.Quintal da casa n.º 43 da  Rua dos Chãos de Cima.Quintal da casa n.º 42 da  Rua dos Chãos de Cima.Quintal da casa n.º 41 da  Rua dos Chãos de Cima.Quintal da casa n.º 40 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 39 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 38 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 37 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 36 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 35 da  Rua dos Chãos de Cima.Quintal da casa n.º 34 da  Rua dos Chãos de Cima.Porta de serventia dos quintais das casas n.ºs 32 e 33 da  Rua dos Chãos de Cima.Porta de serventia do quintal da casa n.º 31 da  Rua dos Chãos de Cima.Caminho de serventia das casas n.ºs 28, 29 e 30 da  Rua dos Chãos de Cima.Pertence ao n.º 27 da  Rua dos Chãos de Cima.Porta de serventia da casa n.º 26 da  Rua dos Chãos de Cima.Quintal da casa n.° 25 da  Rua dos Chãos de Cima.Pertence ao n.º 23 da  Rua dos Chãos de CimaPertence ao n.º 22 da  Rua dos Chãos de CimaDenominado “Campo ou Cortelho da Escoura”. Foi pertença do prazo do  casal de Infias antes de 1736.Pertence ao prazo do Campo ou Cortelho da Escoura.Pertence ao prazo do Campo ou Cortelho da Escoura.Pagam foro ao enfiteuta do prazo da 2.ª metade do  casal do Lagarto. Os n.º 34 e 36 correspondem a quintais.Quintal da casa n.° 38.Pertence à casa n.° 10 da  Rua das Palhotas, para onde tem a frontaria principal.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-56-CangostaDaEscoura-norte.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-56-CangostaDaEscoura-sul.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     

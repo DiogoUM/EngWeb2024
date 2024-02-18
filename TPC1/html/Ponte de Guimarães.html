@@ -1,3 +1,63 @@
 
+    <!DOCTYPE html>
+    <html>
+    <title>Ponte de Guimarães</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
+    <style>
+    .mySlides {display:none}
+    </style>
+    
+    <body>
+
+    <div class="w3-container">
+      <h2>Ponte de Guimarães</h2>
+      <p>Parte terminal da longa artéria que, sensivelmente em linha recta, descia a  Arcada para a ponte sobre o rio Este.Zona rural por excelência, tinha no seu termo uma ponte quinhentista de um só arco, canopial, e que infelizmente foi destruída em data desconhecida.Os dois alçados que vemos no Mappa não são, os dois lados da rua, como à primeira vista poderá parecer; o Norte vai corresponder à parte Oeste do actual  largo do Senhor dos Aflitos ou, segundo a toponímia popular, das Latinhas: e o Poente é a parte final da avenida da Liberdade, lado Oeste entre a Rua Conselheiro Lobato e o rio.Nestes alçados onde coexistem habitações de dois pisos (52,7%) alternando com outras de um só piso (47,2%), e uma única de três pisos, toda a ruralidade da zona está bem patente: casas baixas, com a porta de entrada ladeada de uma janela (55,5%), janelas vazadas que seriam tapadas por portas de madeira, desalinhamento da linha das fachadas, etc.Constrastando há um excelente edifício de três pisos, em pedra, do  séc. XVII, contido em duas fortes pilastras, com portas e janelas com "moldura" de pedra, almofadas sob as janelas do piso nobre e três óculos magnificamente trabalhados no 2º andar.Como elemento curioso na rua há o forno(?) de pedra exterior à casa, no prazo nº 38.As 23 casas do lado Norte e 15 do Poente são todas prazos do  Cabido.Pertence ao nº 50 da  Rua da Ponte de Guimarães, para onde tem frontaria e serventia principais.Paga 60 reis ao enfiteuta do prazo de metade do  Casal dos Galos que foi de Mateus Rodrigues.Paga 50 reis ao enfiteuta do prazo de metade do  Casal dos Galos que foi de Mateus Rodrigues.Os herdeiros de  Diogo Martins, casado com Helena Antónia, pagam 25 reis ao enfiteutaa do prazo de metade do Casal dos Galos que foi de Mateus Rodrigues, conforme o subemprazamento feito em 1631.Paga, ao enfiteuta do prazo de metade do  Casal dos Galos foro que foi de Mateus Rodrigues.Paga 80 reis ao enfiteuta do prazo de metade do  Casal dos Galos que foi de Mateus Rodrigues.Paga 80 reis ao enfiteuta do prazo de metade do  Casal dos Galos que foi de Mateus Rodrigues.Paga 80 reis ao enfiteuta do prazo de metade do  Casal dos Galos que foi de Mateus Rodrigues. Confronta, do nascente, com a cangosta que vai para esta casa e para o nº 9.Paga 140 reis ao nº 17 da  Rua do Paio Manta e Lages. A casa e quintal confrontam de poente, com a cangosta e serventia que passa entre esta casa e nº 8.Paga 140 reis ao nº 17 da  Rua do Paio Manta e LagesPaga 140 reis ao nº 17 da  Rua do Paio Manta e LagesPaga 2000 reis ao enfiteuta do prazo da metade do  casal e moínhos do Salgueiro, que foi de João GomesOs herdeiros de  Manuel Dias, moleiro, casado com Maria Antónia, subenfiteuta do nº30, pagam por estas 7 casas, 3220 reis e 2 galinhas ao nº 17 da Rua do Paio Manta e Lages, conforme subemprazamento feito no ano de 1606.A casa nº28 defronta, do sul, com o Rio Este.Os herdeiros de  Gonçalo Ferreira, cirgueiro, casado com Catarina Nogueira, pagam 1750 reis e 4 galinhas ao n° 17 da Rua Paio Manta e Lages. O portal n° 40 é serventia do campo ou quintal da casa nº 35.Os herdeiros de  Brás Antunes, carpinteiro, casado com Maria Dias, pagam 367 reis ao nº 17 da Rua Paio Manta e Lages.Os herdeiros de  Brás Antunes, carpinteiro, casado com Maria Dias, pagam 367 reis ao n° 17 da Rua Paio Manta e Lages.Os herdeiros de  Brás Antunes, carpinteiro, casado com Maria Dias, pagam 367 reis ao nº 17 da Rua Paio Manta e Lages.Os herdeiros de  Gonçalo Pires, carpinteiro, pagam 500 reis e 1 galinha ao n° 17 da Rua Paio Manta e Lages.Os herdeiros de  Geraldo Dias, carpinteiro, casado com Maria Fernandes, pagam 100 reis ao n° 17 da Rua Paio Manta e Lages.Os herdeiros de  Geraldo Dias, carpinteiro, casado com Maria Fernandes, pagam 100 reis ao n° 17 da Rua Paio Manta e Lages.Confronta, do sul, com a dita rua.</p>
+    </div>
+
+    <div class="w3-content" style="max-width:800px">
+    <img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-39-PonteDeGuimaraes-Norte.jpg style="width:100%"/><img class="mySlides" src=./TPC1/MapaRuas-materialBase/imagem/MRB-39-PonteDeGuimaraes-Poente.jpg style="width:100%"/>
+    </div>
+
+    <div class="w3-center">
+      <div class="w3-section">
+        <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+        <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+      </div>
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+    </script>
+
+    </body>
+    </html>
     
