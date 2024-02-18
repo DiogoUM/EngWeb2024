@@ -111,7 +111,13 @@ for ruaID, ruaObj in dic.items():
         desc = imagem.find('legenda').text
         newPath = cam[2:]
         #TODO alterar path: absoluto -> relativo
-        html4 += f'<img class="mySlides" src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" style="width:100%"/>'
+        html4 += f'''
+        <figure class="mySlides">
+          <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
+          <figcaption>{desc}</figcaption>
+        </figure>
+        '''
+        #html4 += f'<img class="mySlides" src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>'
         html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
         count += 1
 
