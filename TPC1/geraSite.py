@@ -38,7 +38,7 @@ preHTML = '''
   <p><b>Coloque o rato sobre "RUAS" e pesquise/selecione uma rua para obter informação mais detalhada sobre a mesma.</b></p>
   <br>
   <div class="w3-dropdown-hover w3-block">
-    <button class="w3-button w3-block w3-teal w3-round-large" width="1024">RUAS</button>
+    <button class="w3-button w3-block w3-teal w3-round-large" style="width:33%">RUAS</button>
     <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
       <input class="w3-input w3-padding" type="text" placeholder="Pesquisa..." id="myInput" onkeyup="myFunction()">
 '''
@@ -48,7 +48,6 @@ for ruaID, ruaObj in dic.items():
     rua = ruaObj.getroot()
     meta = rua.find('meta')
     nome = meta.find('nome').text
-    #imgs = {}
     paragrafos = ""
     casas = {}
 
@@ -116,11 +115,12 @@ for ruaID, ruaObj in dic.items():
         html4 += f'''
         <figure class="mySlides">
           <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
-          <figcaption>{desc}</figcaption>
+          <figcaption><b>{desc}</b></figcaption>
         </figure>
         '''
         html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
         count += 1
+    html6 += "    </div>"
 
 
     html5 = r'''
@@ -131,10 +131,54 @@ for ruaID, ruaObj in dic.items():
         <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
       </div>
-      '''
     
-    html7 = r'''
+      '''
+    msgIndefinido = "<b><i>Indefinido</i></b>"
+    #tratar casas
+    html7 = ""
+    for listaCasas in corpo.findall('lista-casas'):
+        for casa in listaCasas.findall('casa'):
+            nrCasa = casa.find('número').text
+            enfiteutaCasa = msgIndefinido
+            if (casa.find('enfiteuta')) is not None:
+              enfiteutaCasa = casa.find('enfiteuta').text
+            foroCasa = msgIndefinido
+            if (casa.find('foro')) is not None:
+               foroCasa = casa.find('foro').text
+            descricao = casa.find('desc')   
+            descCasa = ""
+            if descricao is not None:
+              for paragrafo in descricao.findall('.//para'):
+                para_text = extrair_texto(paragrafo)
+                descCasa += para_text
+            if descCasa == "":
+               descCasa = msgIndefinido
+            html7 += f'''
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa {nrCasa}</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b>{enfiteutaCasa}</p>
+                <p><b>Foro: </b>{foroCasa}</p>
+                <p><b>Descrição: </b>{descCasa}</p>
+              </div>
+            </div>
+
+            '''
+        
+
+    html8 = r'''
+    
+    <br>
+    <br>
+    <div class="w3-center">
+      <div class="w3-container w3-cell-middle">
+        <a class="w3-button w3-white w3-border w3-border-teal w3-round-large" href="./index.html">Voltar</a>
+      </div>
     </div>
+
 
     <script>
     var slideIndex = 1;
@@ -158,10 +202,10 @@ for ruaID, ruaObj in dic.items():
         x[i].style.display = "none";  
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-red", "");
+        dots[i].className = dots[i].className.replace(" w3-teal", "");
       }
       x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-red";
+      dots[slideIndex-1].className += " w3-teal";
     }
     </script>
 
@@ -169,7 +213,7 @@ for ruaID, ruaObj in dic.items():
     </html>
     '''
 
-    htmlRuaPag = html1+html2+html3+html4+html5+html6+html7
+    htmlRuaPag = html1+html2+html3+html4+html5+html6+html7+html8
 
     f = open('./TPC1/html/'+ nome +'.html','w', encoding='utf-8')
     f.write(htmlRuaPag)
@@ -209,4 +253,3 @@ pagHTML = preHTML + html + posHTML
 f = open('./TPC1/html/index.html','w')
 f.write(pagHTML)
 f.close()
-

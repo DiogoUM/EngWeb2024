@@ -20,12 +20,12 @@
     
         <figure class="mySlides">
           <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase/imagem/MRB-57-EstradaDeReal-norte.jpg" alt="Estrada de Real - norte." style="width:100%"/>
-          <figcaption>Estrada de Real - norte.</figcaption>
+          <figcaption><b>Estrada de Real - norte.</b></figcaption>
         </figure>
         
         <figure class="mySlides">
           <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase/imagem/MRB-57-EstradaDeReal-sul.jpg" alt="Estrada de Real - sul." style="width:100%"/>
-          <figcaption>Estrada de Real - sul.</figcaption>
+          <figcaption><b>Estrada de Real - sul.</b></figcaption>
         </figure>
         
     </div>
@@ -35,8 +35,56 @@
         <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
       </div>
-      <button class="w3-button demo" onclick="currentDiv(1)">1</button><button class="w3-button demo" onclick="currentDiv(1)">2</button>
+    
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button><button class="w3-button demo" onclick="currentDiv(1)">2</button>    </div>
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 1</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b><b><i>Indefinido</i></b></p>
+                <p><b>Foro: </b><b><i>Indefinido</i></b></p>
+                <p><b>Descrição: </b>Campo do prazo da   Quinta da Cónega(freguesia de S.Pedro de Maximinos).</p>
+              </div>
+            </div>
+
+            
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 2 a 20</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b>Sebastião de Faria Gusmão, enfiteuta principa da Quinta da Cónega.</p>
+                <p><b>Foro: </b><b><i>Indefinido</i></b></p>
+                <p><b>Descrição: </b>Pertencem à  Quinta da Cónega, a cujo enfiteuta se paga foro. O nº17 confronta, do poente, com o caminho que vai para a Quinta do Real.O nº18, confronta, do poente, com o caminho que vai junto da  Curutelapara a cangosta do Pópulo.</p>
+              </div>
+            </div>
+
+            
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 21</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b><b><i>Indefinido</i></b></p>
+                <p><b>Foro: </b><b><i>Indefinido</i></b></p>
+                <p><b>Descrição: </b>Corresponde a um campo do prazo da   Quinta da Cónega. Confronta, do nascente, com a casa nº22 da Rua da Cónega.</p>
+              </div>
+            </div>
+
+            
+    
+    <br>
+    <br>
+    <div class="w3-center">
+      <div class="w3-container w3-cell-middle">
+        <a class="w3-button w3-white w3-border w3-border-teal w3-round-large" href="./index.html">Voltar</a>
+      </div>
     </div>
+
 
     <script>
     var slideIndex = 1;
@@ -60,10 +108,10 @@
         x[i].style.display = "none";  
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-red", "");
+        dots[i].className = dots[i].className.replace(" w3-teal", "");
       }
       x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-red";
+      dots[slideIndex-1].className += " w3-teal";
     }
     </script>
 

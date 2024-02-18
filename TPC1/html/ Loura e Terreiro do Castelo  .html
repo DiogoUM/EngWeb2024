@@ -20,7 +20,7 @@
     
         <figure class="mySlides">
           <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase/imagem/MRB-07-LouraETerreiroDoCastelo.JPG" alt="Loura e Terreiro do Castelo." style="width:100%"/>
-          <figcaption>Loura e Terreiro do Castelo.</figcaption>
+          <figcaption><b>Loura e Terreiro do Castelo.</b></figcaption>
         </figure>
         
     </div>
@@ -30,8 +30,56 @@
         <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
       </div>
-      <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+    
+      <button class="w3-button demo" onclick="currentDiv(1)">1</button>    </div>
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 1</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b>Manuel Ribeiro Pereira</p>
+                <p><b>Foro: </b>350 reis</p>
+                <p><b>Descrição: </b>A casa nº 1 confronta, do sul, com casa foreira à  confraria de S. João do Souto.</p>
+              </div>
+            </div>
+
+            
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 2</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b>Manuel Ribeiro Pereira</p>
+                <p><b>Foro: </b>100 reis e 1 galinha </p>
+                <p><b>Descrição: </b>A casa nº 1 confronta, do sul, com casa foreira à  confraria de S. João do Souto.</p>
+              </div>
+            </div>
+
+            
+            <div class = "w3-container">
+              <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+                <h1>Casa 3</h1>
+              </header>
+
+              <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+                <p><b>Enfiteuta: </b>Dr.António Fernandes do Vale, médico  </p>
+                <p><b>Foro: </b>100 reis e 4 galinhas</p>
+                <p><b>Descrição: </b>Antes de  1480 funcionou aqui o " Forno da Vila"</p>
+              </div>
+            </div>
+
+            
+    
+    <br>
+    <br>
+    <div class="w3-center">
+      <div class="w3-container w3-cell-middle">
+        <a class="w3-button w3-white w3-border w3-border-teal w3-round-large" href="./index.html">Voltar</a>
+      </div>
     </div>
+
 
     <script>
     var slideIndex = 1;
@@ -55,10 +103,10 @@
         x[i].style.display = "none";  
       }
       for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-red", "");
+        dots[i].className = dots[i].className.replace(" w3-teal", "");
       }
       x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-red";
+      dots[slideIndex-1].className += " w3-teal";
     }
     </script>
 

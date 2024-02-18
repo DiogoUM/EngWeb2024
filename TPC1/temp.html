@@ -27,6 +27,55 @@
   <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
 </div>
 
+<!-- parte das casas -->
+<!-- para par 
+<div class = "w3-cell-row">
+
+  <div class = "w3-cell w3-container ">
+    <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+      <h1>Casa a</h1>
+    </header>
+  
+    <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+      <p>Infos...</p>
+    </div>
+  </div>
+
+  <div class = "w3-cell w3-container">
+    <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+      <h1>Casa b</h1>
+    </header>
+    
+    <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+      <p>Infos...</p>
+    </div>
+  </div>
+
+</div>
+-->
+
+<!-- para impar -->
+
+<div class = "w3-container">
+  <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
+    <h1>Casa a</h1>
+  </header>
+
+  <div class="w3-container w3-container w3-light-grey w3-section w3-margin-left w3-margin-right">
+    <p>Infos...</p>
+  </div>
+</div>
+
+
+<br>
+<br>
+<div class="w3-center">
+  <div class="w3-container w3-cell-middle">
+    <a class="w3-button w3-white w3-border w3-border-teal w3-round-large" href="./index.html">Voltar</a>
+  </div>
+</div>
+
+
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -49,10 +98,10 @@ function showDivs(n) {
     x[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-red", "");
+    dots[i].className = dots[i].className.replace(" w3-teal", "");
   }
   x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-red";
+  dots[slideIndex-1].className += " w3-teal";
 }
 </script>
 
