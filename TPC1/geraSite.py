@@ -50,32 +50,16 @@ for ruaID, ruaObj in dic.items():
     paragrafos = ""
     casas = {}
 
-
+    #adiciona a referêmcia à página princimal
     ruahtml = f'      <a class="w3-bar-item w3-button" href="./{nome}.html">{ruaID}. {nome}</a>'
     html += ruahtml
+
+    #daqui para baixo constroi cada uma das páginas de forma individual
 
     #aceder ao corpo do XML da rua
     corpo = rua.find('corpo')
 
-    #guardar as informações das imagens no dicionario 'imgs'
-    html4 = ""
-    for imagem in corpo.findall('figura'):
-        id = imagem.attrib
-        i = imagem.find('imagem')
-        dicPath = i.attrib
-        cam = dicPath['path']
-        desc = imagem.find('legenda').text
-        #imgs[id] = (path,desc)
-        newPath = cam[2:]
-        html4 += f'<img class="mySlides" src=./TPC1/MapaRuas-materialBase{newPath} style="width:100%"/>'
-        print(os.listdir("./TPC1/MapaRuas-materialBase/imagem/"))
 
-
-    for paragrafo in corpo.findall('.//para'):
-        para_text = extrair_texto(paragrafo)
-        paragrafos += para_text
-
-        
     '''
     lcasas = corpo.find('lista-casas')
 
@@ -99,6 +83,11 @@ for ruaID, ruaObj in dic.items():
     .mySlides {display:none}
     </style>
     '''
+
+    for paragrafo in corpo.findall('.//para'):
+        para_text = extrair_texto(paragrafo)
+        paragrafos += para_text
+
     html3 = f'''
     <body>
 
@@ -110,6 +99,23 @@ for ruaID, ruaObj in dic.items():
     <div class="w3-content" style="max-width:800px">
     '''
 
+    #guardar as informações das imagens no dicionario 'imgs'
+    html4 = ""
+    html6 = ""
+    count = 1
+    for imagem in corpo.findall('figura'):
+        id = imagem.attrib
+        i = imagem.find('imagem')
+        dicPath = i.attrib
+        cam = dicPath['path']
+        desc = imagem.find('legenda').text
+        newPath = cam[2:]
+        #TODO alterar path: absoluto -> relativo
+        html4 += f'<img class="mySlides" src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" style="width:100%"/>'
+        html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
+        count += 1
+
+
     html5 = r'''
     </div>
 
@@ -118,8 +124,9 @@ for ruaID, ruaObj in dic.items():
         <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
         <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
       </div>
-      <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
-      <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+      '''
+    
+    html7 = r'''
     </div>
 
     <script>
@@ -155,7 +162,7 @@ for ruaID, ruaObj in dic.items():
     </html>
     '''
 
-    htmlRuaPag = html1+html2+html3+html4+html5
+    htmlRuaPag = html1+html2+html3+html4+html5+html6+html7
 
     f = open('./TPC1/html/'+ nome +'.html','w', encoding='utf-8')
     f.write(htmlRuaPag)
