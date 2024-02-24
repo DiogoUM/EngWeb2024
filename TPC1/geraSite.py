@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as et
 import os
-import pdb 
+import pdb
+
 
 def extrair_texto(elemento):
     texto = elemento.text or ''
@@ -10,7 +11,8 @@ def extrair_texto(elemento):
     texto += elemento.tail or ''
     return texto.strip()
 
-path = "./TPC1/MapaRuas-materialBase/texto/"
+
+path = '../TPC1/MapaRuas-materialBase/texto/'
 ficheiros = os.listdir(path)
 
 dic = {}
@@ -23,7 +25,21 @@ for ficheiro in ficheiros:
     nr = meta.find('número').text
     dic[nr] = arquivo
 
-#gera a página inicial
+dic = dict(sorted(dic.items(), key=lambda x: int(x[0])))
+
+imgsAtual = {}
+# guardar as informações das imagens atuais
+for imagem in os.listdir('../TPC1/MapaRuas-materialBase/atual/'):
+    s = (imagem.split('-'))
+    nr = int(s[0])
+    if nr in imgsAtual:
+        imgsAtual[nr].append(imagem)
+    else:
+        imgsAtual[nr] = [imagem]
+
+
+
+# gera a página inicial
 preHTML = '''
 <!DOCTYPE html>
 <html>
@@ -51,15 +67,14 @@ for ruaID, ruaObj in dic.items():
     paragrafos = ""
     casas = {}
 
-    #adiciona a referêmcia à página princimal
+    # adiciona a referência à página princimal
     ruahtml = f'      <a class="w3-bar-item w3-button" href="./{nome}.html">{ruaID}. {nome}</a>'
     html += ruahtml
 
-    #daqui para baixo constroi cada uma das páginas de forma individual
+    # daqui para baixo constroi cada uma das páginas de forma individual
 
-    #aceder ao corpo do XML da rua
+    # aceder ao corpo do XML da rua
     corpo = rua.find('corpo')
-
 
     '''
     lcasas = corpo.find('lista-casas')
@@ -71,7 +86,7 @@ for ruaID, ruaObj in dic.items():
         descricao = casa.find('desc').text
         casa[nr] = (enf,fo,descricao)
     '''
-    
+
     html1 = f'''
     <!DOCTYPE html>
     <html>
@@ -100,7 +115,6 @@ for ruaID, ruaObj in dic.items():
     <div class="w3-content" style="max-width:800px">
     '''
 
-    #guardar as informações das imagens no dicionario 'imgs'
     html4 = ""
     html6 = ""
     count = 1
@@ -111,15 +125,31 @@ for ruaID, ruaObj in dic.items():
         cam = dicPath['path']
         desc = imagem.find('legenda').text
         newPath = cam[2:]
-        #TODO alterar path: absoluto -> relativo
+        # TODO alterar path: absoluto -> relativo
+        # path pc fixo -> D:/EW/EngWeb2024/
+        # path portatil -> /home/diogo/Desktop/uni/4ºano/EW/EngWeb2024/
         html4 += f'''
         <figure class="mySlides">
-          <img src="D:/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
+          <img src="/home/diogo/Desktop/uni/4ºano/EW/EngWeb2024/TPC1/MapaRuas-materialBase{newPath}" alt="{desc}" style="width:100%"/>
           <figcaption><b>{desc}</b></figcaption>
         </figure>
         '''
         html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
         count += 1
+
+    imagensAtuais = imgsAtual[int(ruaID)]
+    iAt = 1
+    for imagemAtual in imagensAtuais:
+        html4 += f'''
+                <figure class="mySlides">
+                  <img src="/home/diogo/Desktop/uni/4ºano/EW/EngWeb2024/TPC1/MapaRuas-materialBase/atual/{imagemAtual}" alt="{imagemAtual}" style="width:100%"/>
+                  <figcaption><b>Imagem Atual {iAt}</b></figcaption>
+                </figure>
+                '''
+        html6 += f'<button class="w3-button demo" onclick="currentDiv(1)">{count}</button>'
+        iAt += 1
+        count += 1
+
     html6 += "    </div>"
 
 
@@ -134,25 +164,25 @@ for ruaID, ruaObj in dic.items():
     
       '''
     msgIndefinido = "<b><i>Indefinido</i></b>"
-    #tratar casas
+    # tratar casas
     html7 = ""
     for listaCasas in corpo.findall('lista-casas'):
         for casa in listaCasas.findall('casa'):
             nrCasa = casa.find('número').text
             enfiteutaCasa = msgIndefinido
             if (casa.find('enfiteuta')) is not None:
-              enfiteutaCasa = casa.find('enfiteuta').text
+                enfiteutaCasa = casa.find('enfiteuta').text
             foroCasa = msgIndefinido
             if (casa.find('foro')) is not None:
-               foroCasa = casa.find('foro').text
-            descricao = casa.find('desc')   
+                foroCasa = casa.find('foro').text
+            descricao = casa.find('desc')
             descCasa = ""
             if descricao is not None:
-              for paragrafo in descricao.findall('.//para'):
-                para_text = extrair_texto(paragrafo)
-                descCasa += para_text
+                for paragrafo in descricao.findall('.//para'):
+                    para_text = extrair_texto(paragrafo)
+                    descCasa += para_text
             if descCasa == "":
-               descCasa = msgIndefinido
+                descCasa = msgIndefinido
             html7 += f'''
             <div class = "w3-container">
               <header class="w3-container w3-teal w3-section w3-margin-left w3-margin-right">
@@ -167,7 +197,6 @@ for ruaID, ruaObj in dic.items():
             </div>
 
             '''
-        
 
     html8 = r'''
     
@@ -213,12 +242,11 @@ for ruaID, ruaObj in dic.items():
     </html>
     '''
 
-    htmlRuaPag = html1+html2+html3+html4+html5+html6+html7+html8
+    htmlRuaPag = html1 + html2 + html3 + html4 + html5 + html6 + html7 + html8
 
-    f = open('./TPC1/html/'+ nome +'.html','w', encoding='utf-8')
+    f = open('../TPC1/html/' + nome + '.html', 'w', encoding='utf-8')
     f.write(htmlRuaPag)
     f.close()
-
 
 posHTML = '''
     </div>
@@ -250,6 +278,6 @@ function myFunction() {
 
 pagHTML = preHTML + html + posHTML
 
-f = open('./TPC1/html/index.html','w')
+f = open('../TPC1/html/index.html', 'w')
 f.write(pagHTML)
 f.close()
