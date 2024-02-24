@@ -63,7 +63,7 @@ http.createServer((req, res)=>{
                 var dataLigacoes = resp.data
 
                 res.write('<header class="w3-container w3-teal"> <h1>'+ data.nome +'</h1></header>')
-                res.write('<div class="w3-container"> <p><b>População:</b> ' + data["população"] + '</p>')
+                res.write('<div class="w3-container"> <p><b>População:</b> ' + data["população"] + ' habitantes</p>')
                 res.write('<p><b>Distrito:</b> '+ data.distrito +"</p>")
                 res.write('<p><b>Descrição:</b> ' + data["descrição"] + '</p>')
                 res.write('</div>')
@@ -123,7 +123,7 @@ http.createServer((req, res)=>{
     })}
 
     else {
-        res.write("operaçao nao suportada")
+        res.write(`<meta http-equiv="refresh" content="0; URL='http://localhost:2002/cidades'"/>`)
         res.end();
     }
 
